@@ -18,20 +18,5 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="assets/main.js"></script>
 
-    <script>
-
-        jQuery.ajax({
-            url: 'https://www.codeschool.com/users/1195032.json',
-            dataType: 'jsonp',
-            success: function (response) {
-                $.each(response.courses.completed, function (index, item) {
-                    console.log('i ' + index + ' v ' + item);
-                    $("#badges").append("<div class='course'><h3>" + item.title + "</h3><img src='" + item.badge + "'/><a href='" + item.url + "' class='btn btn-primary' taget='_blank'>See Course</a></div>")
-                });
-            }
-        });
-
-    </script>
-
 </body>
 </html>
